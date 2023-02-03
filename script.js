@@ -34,10 +34,10 @@ $(cells).each(function() {
     })
 })
 
-
 function check_win() {
     for (value in values){
         for (group in groups) {
+            console.log(groups[group])
             for (cell in groups[group]) {
                 console.log(groups[group][cell])
                 if ($(cells).eq(cell).text() != value){
