@@ -1,0 +1,96 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500;600;700;800;900&display=swap');
+
+$background-color: #000000;
+$darkgray-background: #111012;
+$text-color-light-gray: #e7c8fc;
+$text-color-gray: #858485;
+$transparent: rgba(1, 1, 1, 0);
+
+* { /* RESET */
+    vertical-align: baseline;
+    font-weight: 400;
+    font-family: "Rubik", sans-serif;
+    font-style: inherit;
+    font-size: 18px;
+    line-height: 1.3;
+    text-decoration: none;
+    box-sizing: border-box;
+    border: 0 none;
+    outline: 0;
+    padding: 0;
+    margin: 0;
+    color: white;
+}
+
+head, script {
+    display: none;
+}
+
+body {
+    background-color: $darkgray-background;
+    user-select: none;
+}
+
+#tic-tac-toe {
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+h1 {
+    font-size: 2em;
+    font-weight: 300;
+    margin-bottom: 50px;
+    overflow: hidden;
+}
+
+span {
+    display: inline;
+    vertical-align: inherit;
+    text-align: inherit;
+    font-size: inherit;
+    font-weight: 500;
+    overflow: inherit;
+}
+
+table {
+    border-collapse: collapse;
+}
+
+td {
+    vertical-align: middle;
+    text-align: center;
+    width: 1.5em;
+    height: 1.5em;
+    font-size: 5em;
+    font-weight: 800;
+    border: 2px solid white;
+    background-color: $background-color;
+}
+
+td:active {
+    background-color: white;
+}
+
+svg {
+    position: fixed;
+    width: 100ch;
+    height: 100vh;
+    top: 25%;
+    left: 25%;
+    display: none;
+}
+
+@media (max-width: 690px) {
+    * {
+        font-size: 12px;
+    }
+}
+
+@media (max-width: 440px) {
+    * {
+        font-size: 8px;
+    }
+}
