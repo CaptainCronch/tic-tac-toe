@@ -68,10 +68,14 @@ td {
     font-weight: 800;
     border: 2px solid white;
     background-color: $background-color;
+    transition: background-color 0.2s;
+    color: white;
+    transition: color 0.5s;
 }
 
 td:active {
     background-color: white;
+    color: black;
 }
 
 svg {
