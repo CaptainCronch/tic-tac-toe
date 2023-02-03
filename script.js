@@ -29,8 +29,6 @@ $(cells).each(function() {
 
             if (check_win()) {
                 console.log("WIN!!!!!!!")
-            } else {
-                console.log("not yet :(")
             }
         }
     })
@@ -40,13 +38,13 @@ $(cells).each(function() {
 function check_win() {
     for (value in values){
         for (group in groups) {
-            for (cell in group) {
+            for (cell in groups[group]) {
+                console.log(groups[group][cell])
                 if ($(cells).eq(cell).text() != value){
-                    console.log($(cells).eq(cell).text())
+                    //console.log($(cells).eq(groups[group][cell]).text())
                     break
                 }
-                console.log("worked")
-                return true;
+                return true
             }
         }
     }
